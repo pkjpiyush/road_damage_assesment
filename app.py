@@ -1,8 +1,3 @@
-"""
-app.py
-Run it with:  streamlit run app.py
-Your browser opens with the app. Upload a road photo to see the result.
-"""
 import io
 
 import numpy as np
