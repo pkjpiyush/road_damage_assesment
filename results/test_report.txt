@@ -1,10 +1,10 @@
                      precision    recall  f1-score   support
 
    alligator_cracks      0.938     1.000     0.968        15
-longitudinal_cracks      0.643     0.600     0.621        15
+longitudinal_cracks      0.667     0.667     0.667        15
            potholes      1.000     0.933     0.966        15
-  transverse_cracks      0.625     0.667     0.645        15
+  transverse_cracks      0.667     0.667     0.667        15
 
-           accuracy                          0.800        60
-          macro avg      0.801     0.800     0.800        60
-       weighted avg      0.801     0.800     0.800        60
+           accuracy                          0.817        60
+          macro avg      0.818     0.817     0.817        60
+       weighted avg      0.818     0.817     0.817        60

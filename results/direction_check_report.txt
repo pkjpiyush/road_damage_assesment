@@ -1,0 +1,37 @@
+=== Model only ===
+                     precision    recall  f1-score   support
+
+   alligator_cracks      0.938     1.000     0.968        15
+longitudinal_cracks      0.643     0.600     0.621        15
+           potholes      1.000     0.933     0.966        15
+  transverse_cracks      0.625     0.667     0.645        15
+
+           accuracy                          0.800        60
+          macro avg      0.801     0.800     0.800        60
+       weighted avg      0.801     0.800     0.800        60
+
+=== Model + direction check ===
+                     precision    recall  f1-score   support
+
+   alligator_cracks      0.938     1.000     0.968        15
+longitudinal_cracks      0.533     0.533     0.533        15
+           potholes      1.000     0.933     0.966        15
+  transverse_cracks      0.533     0.533     0.533        15
+
+           accuracy                          0.750        60
+          macro avg      0.751     0.750     0.750        60
+       weighted avg      0.751     0.750     0.750        60
+
+Accuracy, model only:             80.0%
+Accuracy, with direction check:   75.0%
+
+What the direction check did on longitudinal/transverse predictions:
+  confirmed the model:     7
+  changed the answer:      3
+  no centre line found:    15
+  crack direction unclear: 5
+
+Fixed by the direction check (0): none
+Broken by the direction check (3): longitudinal_cracks/road-damage-concrete-has-experienced-260nw-2700764155.jpg, transverse_cracks/images (10).jpg, transverse_cracks/images (9).jpg
+
+Verdict: the direction check HURT. Look at the 'broken' photos, or set USE_DIRECTION_RULE = False in config.py.

@@ -87,8 +87,9 @@ def callbacks(best_so_far=None):
             config.MODEL_PATH, monitor="val_loss", mode="min", save_best_only=True,
             initial_value_threshold=best_so_far, verbose=1,
         ),
-        # Stops early if validation loss hasn't improved for 5 epochs
-        keras.callbacks.EarlyStopping(monitor="val_loss", patience=5, restore_best_weights=True),
+        # Stops early if validation loss hasn't improved for a while (see config.py)
+        keras.callbacks.EarlyStopping(monitor="val_loss", patience=config.EARLY_STOP_PATIENCE,
+                                      restore_best_weights=True),
         # Lowers the learning rate when progress stalls
         keras.callbacks.ReduceLROnPlateau(monitor="val_loss", factor=0.3, patience=3, verbose=1),
     ]
