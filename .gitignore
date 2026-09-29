@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Data: processed images are recreated by prepare_data.py
+data/processed/
+# Raw images are ignored too. Delete the next line if you want to upload your dataset
+# (only do this if you have permission to share the images).
+data/raw/*
+!data/raw/.gitkeep
+
+# Editors and OS
+.vscode/
+.DS_Store
+Thumbs.db

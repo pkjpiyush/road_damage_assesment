@@ -1,0 +1,7 @@
+[theme]
+base = "light"
+primaryColor = "#B87A00"            # road-marking amber
+backgroundColor = "#EEF0ED"         # concrete grey
+secondaryBackgroundColor = "#DDE1DC"
+textColor = "#23282D"               # asphalt
+font = "sans serif"
